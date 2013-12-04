@@ -27,7 +27,8 @@ if (document.body) {
 	var buildModal = function(_elt, _host){
 		var $div = $("#wktdbg .modal-body p");
 		if ($div.length == 0){
-			$('<div class="modal hide" id="wktdbg"><div class="modal-header">'+
+			$('<div class="modal" id="wktdbg"><div class="modal-dialog">'+
+				'<div class="modal-content"><div class="modal-header">'+
 		  '<button type="button" class="close" data-dismiss="modal">×</button>'+
 		  '<h3>Chrome Debug to IDE</h3>'+
 		  '</div>'+
@@ -37,7 +38,7 @@ if (document.body) {
 		  '<div class="modal-footer">'+
 		  '<p class="info"></p>' +
 		  '<a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>'+
-		  '</div>'+
+		  '</div></div></div>'+
 		  '</div>').appendTo(document.body);
 		  $div = $("#wktdbg .modal-body p");
 		}
